@@ -1,48 +1,70 @@
-# Astro Starter Kit: Basics
+# Isosketches
 
-```sh
-npm create astro@latest -- --template basics
+Isosketches is an Astro-based project that integrates React and p5.js to create animated, isometric sketches. The project demonstrates how to use Astro with modern front-end technologies to build interactive, visually engaging web experiences.
+
+This is mostly a test project to test the capabilities of various AI models at creating graphics and animations. The following models have been used:
+
+-   OpenAI 03-mini
+-   Claude 3.5 Sonnet
+
+## Overview
+
+This repository includes:
+
+-   **Astro Setup:** A basic Astro project structure with a custom layout and integrated Tailwind CSS for styling.
+-   **React Components:** Including a welcome component and a layout component that manage the overall look and feel.
+-   **p5.js Sketches:** A dynamic p5.js sketch that generates animated isometric diamond grids. The sketch is encapsulated in a React component to leverage Astro's client-side interactivity.
+
+## Running Locally
+
+### Prerequisites
+
+-   Node.js (v14+ recommended)
+-   Yarn (v4.6.0 as specified in the repository)
+
+### Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/your-username/isosketches.git
+cd isosketches
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. **Install dependencies:**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+yarn install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Development Server
 
-## 🧞 Commands
+To start the development server, run:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+yarn dev
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+This command starts the Astro development server. Open your browser and navigate to `http://localhost:3000` to view the project.
 
-## 👀 Want to learn more?
+### Building for Production
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To build the project for production, run:
+
+```bash
+yarn build
+```
+
+After the build completes, you can preview the production build locally:
+
+```bash
+yarn preview
+```
+
+## Project Structure
+
+-   `src/components/`: Contains the React components used in the application.
+-   `src/layouts/`: Contains layout templates for consistent page structure.
+-   `src/pages/`: Includes the main pages. For example, the `index.astro` file serves as the homepage and `1.astro` loads the p5.js sketch.
+-   `src/sketches/`: Contains the p5.js sketches wrapped in React components.
+-   `src/styles/`: Global styles, including Tailwind CSS integration.
